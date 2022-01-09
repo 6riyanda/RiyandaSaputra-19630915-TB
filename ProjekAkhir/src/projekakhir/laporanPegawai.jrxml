@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="700" pageHeight="842" columnWidth="660" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="76d2dbd8-08d1-4cfe-95a9-69867997a78d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[select * from pegawai]]>
+	</queryString>
+	<field name="nip" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_pegawai" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenis_kelamin" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_lahir" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jabatan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="118" y="0" width="515" height="33" uuid="6846d295-fd17-4362-89d7-fbdb3bd2f922"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Laporan Data Pegawai Sekretaris Daerah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="276" y="33" width="171" height="22" uuid="9af3f06f-67c2-4896-a952-10a367c42162"/>
+				<text><![CDATA[Kabupaten Kotabaru]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="216" y="55" width="297" height="22" uuid="794c4ee9-002f-4a2b-81e9-fb94bb9fd782"/>
+				<text><![CDATA[PROVINSI KALIMANTAN SELATAN]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="173" height="100" uuid="66c3e454-6f8e-4a23-b0ad-68a4e38028fd"/>
+				<imageExpression><![CDATA["C:\\Users\\Asus ROG\\Downloads\\logo-kotabaru.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement style="Column header" x="61" y="21" width="92" height="15" uuid="fa73d3fe-0b1a-4114-bb0a-0542ad81f6ed"/>
+				<text><![CDATA[NIP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="153" y="21" width="92" height="15" uuid="7536fbd8-0723-4bec-a65b-871824540a78"/>
+				<text><![CDATA[NAMA PEGAWAI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="245" y="21" width="92" height="15" uuid="85a60bac-d14d-41b0-9592-07f19587068b"/>
+				<text><![CDATA[JENIS KELAMIN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="337" y="21" width="92" height="15" uuid="28736135-f16a-4b35-92ef-9c92e06b7df1"/>
+				<text><![CDATA[TANGGAL LAHIR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="429" y="21" width="92" height="15" uuid="520d61ce-f4ac-48ee-aecd-372fe282a337"/>
+				<text><![CDATA[JABATAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="521" y="21" width="92" height="15" uuid="ce7fcaa0-6399-4984-95eb-e1e21e366651"/>
+				<text><![CDATA[ALAMAT]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement style="Detail" x="60" y="14" width="92" height="15" uuid="f262ea24-5891-48fe-9c14-8763a71a3eef"/>
+				<textFieldExpression><![CDATA[$F{nip}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="152" y="16" width="92" height="15" uuid="722fc18b-e261-4500-900f-218412adfefc"/>
+				<textFieldExpression><![CDATA[$F{nama_pegawai}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="244" y="16" width="92" height="15" uuid="8dd48529-ca51-4012-bb84-f9c12ca40f2d"/>
+				<textFieldExpression><![CDATA[$F{jenis_kelamin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="336" y="16" width="92" height="15" uuid="cfee30ee-1e49-4fa0-a79c-092883f44e75"/>
+				<textFieldExpression><![CDATA[$F{tanggal_lahir}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="428" y="16" width="92" height="15" uuid="920bd844-6902-451e-9c16-2ef7d255c530"/>
+				<textFieldExpression><![CDATA[$F{jabatan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="521" y="16" width="92" height="15" uuid="f7b1e48e-9d66-4078-a6f3-86534cc8c7e6"/>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="61" y="1" width="555" height="1" uuid="52c3dd2e-6b87-40ae-b462-fe4da5d453a0"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="61" y="1" width="555" height="1" uuid="67fb7b85-dcde-497c-85f7-d33f7e71488b"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="1a3ed795-60ff-48d9-80aa-1bc6bfe972d5"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="eee3e84e-aa82-4887-8109-6d4b84c08a3f"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="83fafd37-6f96-4bab-9155-2b55030cc258"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
